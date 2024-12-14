@@ -3,10 +3,10 @@
     "name": "SwissView",
     "description": "Custom new tab page for coding challenges",
     "version": "1.0",
+    "permissions": ["tabs"],
     "chrome_url_overrides": {
       "newtab": "newtab.html"
-    },
-    "permissions": [],
+    },    
     "background": {
       "service_worker": "background.js"
     },
@@ -20,7 +20,8 @@
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
         "128": "icons/icon128.png"
-      }
+      },
+      "default_title": "New SwissView tab"
     }
   }
   
