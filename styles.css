@@ -1,0 +1,23 @@
+/* Reset page margin and padding */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    background-color: #04295B; /* Background color */
+    font-family: 'Arial', sans-serif; /* Set font */
+  }
+  
+  .container {
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  h1 {
+    color: white; /* White text color */
+    font-size: 48px; /* Large font size */
+    font-weight: bold; /* Bold font weight */
+    margin: 0; /* Remove default margin */
+  }
+  
