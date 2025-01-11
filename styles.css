@@ -30,13 +30,25 @@ html, body {
 #time:hover {
   color: #f3d98d;
   transform: scale(1.1); /* Slightly enlarge the element */
-  text-shadow: 0 0 10px #f3d98d;
 }
 
 #date {
   font-size: 1.5em;
   color: #d0d0d0;
   margin: 0;
+}
+
+/* Dynamic Section for Greeting */
+#dynamic-section {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center content inside dynamic-section */
+  margin-top: 2rem;
+}
+
+#greetings {
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 /* Coding Challenges Container (Bottom Center) */
@@ -46,7 +58,7 @@ html, body {
   padding-bottom: 20px; /* Add spacing from the bottom */
 }
 
-h1 {
+.bottom-container h1 {
   font-size: 100px;
   font-weight: bold;
   margin: 0;

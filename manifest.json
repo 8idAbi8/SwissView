@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "SwissView",
-    "description": "Custom new tab page for coding challenges",
+    "description": "Custom home page for your Internet browser, inspired by codingchallenges.fyi",
     "version": "1.0",
     "permissions": ["tabs"],
     "chrome_url_overrides": {
