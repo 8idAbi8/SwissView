@@ -3,7 +3,10 @@
     "name": "SwissView",
     "description": "Custom home page for your Internet browser, inspired by codingchallenges.fyi",
     "version": "1.0",
-    "permissions": ["tabs"],
+    "permissions": [
+    "tabs",
+    "https://*/"
+    ],
     "chrome_url_overrides": {
       "newtab": "newtab.html"
     },    

@@ -51,15 +51,28 @@ html, body {
   font-weight: 400;
 }
 
-/* Coding Challenges Container (Bottom Center) */
-.bottom-container {
-  margin-top: auto;     /* Push to the bottom */
+#coding-challenges {
   text-align: center;
-  padding-bottom: 20px; /* Add spacing from the bottom */
+  margin-top: 60px;
+  color: #ffffff;
 }
 
-.bottom-container h1 {
-  font-size: 100px;
-  font-weight: bold;
-  margin: 0;
+#coding-challenges ul {
+  list-style-type: none;
+  padding: 0;
 }
+
+#coding-challenges li {
+  margin: 10px 0;
+}
+
+#coding-challenges a {
+  color: #f3d98d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#coding-challenges a:hover {
+  color: #ffffff;
+}
+
