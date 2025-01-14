@@ -76,3 +76,7 @@ html, body {
   color: #ffffff;
 }
 
+#challenges-heading {
+  display: none; /* Hide the heading initially */
+}
+

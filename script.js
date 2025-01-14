@@ -2,6 +2,9 @@
 const timeElement = document.getElementById("time");
 const dateElement = document.getElementById("date");
 
+const headingElement = document.getElementById("challenges-heading");
+const challengeListElement = document.getElementById("challenge-list");
+
 // Constants for URLs
 const PROXY_URL = "https://cors-anywhere.herokuapp.com/";
 const FEED_URL = "https://codingchallenges.substack.com/feed";
@@ -63,6 +66,9 @@ async function fetchCodingChallenges() {
   */
   try {
     const response = await fetch(PROXY_URL + FEED_URL);    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const data = await response.text();
     const parser = new DOMParser();  // Create a parser for XML data
     const xmlDoc = parser.parseFromString(data, "text/xml");  // Parse the RSS XML string into a DOM object
@@ -77,12 +83,14 @@ async function fetchCodingChallenges() {
         challengesHtml += `<li><a href="${link}" target="_blank">${title}</a></li>`;
       }
     });
-     // Update the webpage with the list of challenges
-    document.getElementById("challenge-list").innerHTML = `<ul>${challengesHtml}</ul>`;
-
+    // Only show the header and challenges list if challenges were successfully fetched
+    if (challengesHtml) {  // truthy value check
+      challengeListElement.innerHTML = `<ul>${challengesHtml}</ul>`;
+      headingElement.style.display = "block"; // Show the header
+    }
   } catch (error) {
     console.error("Error fetching the feed:", error);
-    document.getElementById("coding-challenges").innerHTML = `<p>Error loading challenges. Please try again later.</p>`;
+    challengeListElement.innerHTML = `<p>Error loading challenges. Please try again later.</p>`;
   }
 }
 
